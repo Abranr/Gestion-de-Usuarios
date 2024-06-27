@@ -1,6 +1,23 @@
 # GestionDeUsuarios
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## AHD1
+Este proyecto es un gestor de usuarios simple que permite agregar y eliminar usuarios. La interfaz de usuario es minimalista y utiliza animaciones y efectos para mejorar la experiencia del usuario.
+## Mockup del Proyecto
+ ![alt text](image-3.png)
+![alt text](988shots_so.png)
+
+## Características
+- Agregar nuevos usuarios
+- Eliminar usuarios existentes
+- Diseño responsivo
+- Animaciones y efectos interactivos
+## 🛠 Tecnologías Utilizadas
+- Angular
+- HTML
+- CSS
+- Typescript
+## Authors
+- [@Abranr](https://github.com/Abranr)
 
 ## Development server
 
