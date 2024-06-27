@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]="formularioUsuario" (ngSubmit)="agregarUsuario()" class="animate">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" formControlName="nombre" class="form-control">
+      <div *ngIf="formularioUsuario.get('nombre')?.invalid && formularioUsuario.get('nombre')?.touched">
+        <span class="error-message">El Nombre solo puede contener letras y espacios y debe tener al menos 3
+          caracteres.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="edad">Edad:</label>
+      <input id="edad" type="number" formControlName="edad" class="form-control">
+      <div *ngIf="formularioUsuario.get('edad')?.invalid && formularioUsuario.get('edad')?.touched">
+        <span class="error-message">LaEdad es requerida y debe ser un número positivo y no puede contener letras.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dpi">DPI:</label>
+      <input id="dpi" formControlName="dpi" class="form-control">
+      <div *ngIf="formularioUsuario.get('dpi')?.invalid && formularioUsuario.get('dpi')?.touched">
+        <p class="error-message">El DPI debe tener hasta 13 dígitos y solo contener números.</p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+  </form>
+
+  <div *ngIf="resultado" class="resultado">{{ resultado }}</div>
+
+  <ul class="list-group">
+    <li *ngFor="let usuario of listaUsuarios; let i = index" class="list-group-item">
+      {{ usuario.nombre }} ({{ usuario.edad }} años) - DPI: {{ usuario.dpi }}
+      <button (click)="borrarUsuario(i)" class="btn btn-danger">Eliminar</button>
+    </li>
+  </ul>
+
+  <button class="btn btn-secondary" (click)="borraTodos()">Borrar Todos</button>
+</div>
