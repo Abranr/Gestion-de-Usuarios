@@ -1,3 +1,10 @@
+
+span{
+  color: darkgoldenrod;
+}
+section{
+  margin-top: 15px;
+}
 .container {
   max-width: 600px;
   margin: 40px auto;
